@@ -1,0 +1,36 @@
+import random
+users_throw = int(input("Enter:\n1 - rock\n2 - paper\n3 - scissors\n4 - spock\n5 - lizard\n"))
+computers_throw = random.randint(1,5) # inclusive of both ends
+
+if computers_throw == 1:
+    print("Computer throws Rock!")
+elif computers_throw == 2:
+    print("Computer throws Paper!")
+elif computers_throw == 3:
+    print("Computer throws Scissors!")
+elif computers_throw == 4:
+    print("Computer throws spock!")
+elif computers_throw == 5 :
+    print("Computer throws lizard!")
+
+if users_throw == computers_throw:
+    print("Tie!")
+elif ( users_throw == 1
+       and (computers_throw == 3
+       or computers_throw == 5 )) \
+    or ( users_throw == 2
+         and (computers_throw == 1
+         or computers_throw == 4 )) \
+    or ( users_throw == 3
+         and (computers_throw == 2
+         or computers_throw == 5 )) \
+    or ( users_throw == 4
+         and (computers_throw == 1
+         or computers_throw == 3)) \
+    or ( users_throw == 5
+         and (computers_throw == 2
+         or computers_throw == 4)): \
+    print("You win!")
+
+else:
+    print("You lose!")
