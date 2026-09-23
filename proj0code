@@ -1,0 +1,24 @@
+import math
+
+print("Lets plan a party!")
+
+guest_count = int(input("How many guests will be at the party: \n"))
+food = input("What food will you be serving? \n")
+
+if food == "pizza":
+    pizza_count = (math.ceil(guest_count * (1/3)))
+    print("You need", pizza_count, "pizzas!")
+    cost = float(input("How much does the pizza cost\n"))
+    print(f"total: {cost * pizza_count:.2f}")
+elif food == "salad":
+    salad_count = (math.ceil(guest_count * (1 / 4)))
+    print("You need", salad_count, "salads!")
+    cost = float(input("How much does each salad cost\n"))
+    print(f"total: {cost * salad_count:.2f}")
+elif food == "pop":
+    pop_count = (math.ceil(guest_count * (3 / 8)))
+    print("You need", pop_count, ",2 liters!")
+    cost = float(input("How much does each 2 liter cost\n"))
+    print(f"total: {cost * pop_count:.2f}")
+else:
+    print("Enter a valid choice")
