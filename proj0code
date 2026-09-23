@@ -2,7 +2,7 @@ import math
 
 print("Lets plan a party!")
 
-guest_count = int(input("How many guests will be at the party: \n"))
+guest_count = int(input("How many guests(include yourself) will be at the party: \n"))
 food = input("What food will you be serving? \n")
 
 if food == "pizza":
